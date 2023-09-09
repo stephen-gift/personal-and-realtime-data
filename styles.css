@@ -2,6 +2,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .mainContainer {
   display: flex;
@@ -9,37 +10,94 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: aqua;
+  background-image: url(./assets/profileBg.jpg);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center;
+  background-size: cover;
 }
 .container {
-  background-color: beige;
   height: 70%;
   width: 60%;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .leftHeader {
   border-radius: 20px;
   flex: 1;
-  background: navy;
+  /* background: navy; */
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  position: relative;
 }
-/* .profileImg {
-  background-color: #fff;
-  width: 170px;
-  height: 170px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  filter: blur(1);
-} */
+.leftImg {
+  position: absolute;
+  background-image: url(./assets/profileImg.jpeg);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center;
+  background-size: cover;
+  filter: sepia(5);
+  -webkit-filter: sepia(5);
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  border-radius: 20px;
+}
+.profileImg,
+.keyProfileInfo {
+  z-index: 2;
+}
+
+.keyProfileInfo h2{
+    color: white;
+    font-size: xx-large;
+}
+.keyProfileInfo h5{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+h5 span {
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+  /* color: green; */
+}
+
+.keyProfileInfo {
+  text-align: center;
+}
+.keyProfileInfo h2 {
+  margin: 0;
+}
+.keyProfileInfo h5 {
+  margin: 0;
+}
+.keyProfileInfo h5 span {
+  font-weight: 700;
+  font-style: italic;
+}
 img {
   width: 150px;
   height: 150px;
@@ -48,10 +106,78 @@ img {
 .rightInfo {
   border-radius: 20px;
   flex: 1;
-  background-color: #fff;
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 25px;
+}
+.blurBg {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.headInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.headInfo h5 {
+  margin: 0;
+  text-align: center;
+  font-size: small;
+  font-weight: 400;
+}
+.headInfo p {
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+.headInfo button {
+  background-image: linear-gradient(
+    92.88deg,
+    #455eb5 9.16%,
+    #5643cc 43.89%,
+    #673fd7 64.72%
+  );
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 2rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headInfo button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: 0.1s;
+}
+
+@media (min-width: 768px) {
+  .headInfo button {
+    padding: 0 2.6rem;
+  }
 }

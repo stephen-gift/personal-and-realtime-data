@@ -10,19 +10,41 @@
     <div class="mainContainer">
         <div class="container">
             <div class="leftHeader">
+                <div class="leftImg"></div>
                 <div class="profileImg">
-                    <img  src="./assets/profileImg.jpeg" alt="">
+                    <img data-testid="slackDisplayImage" src="./assets/profileImg.jpeg" alt="Stephen Gift">
                 </div>
                 <div class="keyProfileInfo">
-
+                    <h2 data-testid="slackUserName">Stephen Gift</h2>
+                    <h5>status: <span></span></h5>
                 </div>
             </div>
-            <div class="rightInfo"></div>
+            <div class="rightInfo">
+                <div class="blurBg">
+
+                    <div class="headInfo">
+                        <h5>Day</h5>
+                        <p data-testid="currentDayOfTheWeek" id="currentDay"></p>
+                    </div>
+                    <div class="headInfo">
+                        <h5>UTC Time in Milliseconds</h5>
+                        <p data-testid="currentUTCTime" id="currentTime"></p>
+                    </div>
+                    <div class="headInfo">
+                        <h5>Track</h5>
+                        <p data-testid="myTrack">Frontend</p>
+                    </div>
+                    <div class="headInfo">
+                        <h5>GitHub</h5>
+                        <button  data-testid="githubURL" ><img style="width: 20px;height: auto;" src="./assets/github.svg" alt="github"></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 
-    <script src="script.css"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>
