@@ -65,24 +65,24 @@ body {
   z-index: 2;
 }
 
-.keyProfileInfo h2{
-    color: white;
-    font-size: xx-large;
+.keyProfileInfo h2 {
+  color: white;
+  font-size: xx-large;
 }
-.keyProfileInfo h5{
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.keyProfileInfo h5 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 h5 span {
-    display: inline-flex;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: green;
-  /* color: green; */
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  cursor: pointer;
 }
 
 .keyProfileInfo {
@@ -122,6 +122,11 @@ img {
   backdrop-filter: blur(3.7px);
   -webkit-backdrop-filter: blur(3.7px);
   border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
 .headInfo {
   display: flex;
